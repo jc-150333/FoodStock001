@@ -12,7 +12,7 @@ namespace FoodStock01
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EntryPage1 : ContentPage
     {
-        DateTime d; //フードピッカーの値を一時的に保持する
+        DateTime d; //フードピッカーの値を一時的に保持する.
         TimeSpan s; //後で使うかも
 
         DateTime now = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);//現在日付
@@ -61,7 +61,7 @@ namespace FoodStock01
             FoodModel.InsertFood(1, NameEntry.Text, result);//
             DisplayAlert(NameEntry.Text, result.ToString(), "ok");
 
-            Navigation.PushAsync(new NextPage(FoodNavi(new FoodPage1("食材リスト"))));//
+            //Navigation.PushAsync(new NextPage(FoodNavi(new FoodPage1("食材リスト"))));//
         }
 
         /***************「すべて削除ボタン」が押された時********************/
