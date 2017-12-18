@@ -14,7 +14,7 @@ namespace FoodStock01
     {
         String s = "http://cookpad.com/search/";
 
-        var listView = new ListView();
+        //var listView = new ListView();
 
         public FoodPage1(string title)
         {
