@@ -29,6 +29,10 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
+                
+                <Button x:Name ="deletebutton"
+                        Text ="Delete"
+                        Clicked="Delete_Clicked"/>
 
                 <Label Text="食材名" 
                        BackgroundColor="Transparent"

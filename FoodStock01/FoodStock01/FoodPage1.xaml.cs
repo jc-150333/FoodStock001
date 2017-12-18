@@ -38,6 +38,17 @@ namespace FoodStock01
             }
         }
 
+        void Delete_Clicked(object sender,EventArgs args)
+        {
+            var item = (UserModel)args.Item;
+
+            if (await DisplayAlert("削除してよろしいですか", item.ToString(), "OK", "キャンセル"))
+            {
+                ar.RemoveAt(ar.IndexOf(item));
+                UserModel.deleteUser(item.Id);
+            }
+        }
+
         /*void OnButtonClicked(object sender, EventArgs e)
         {
             s += ((Button)sender).Text + "　";
