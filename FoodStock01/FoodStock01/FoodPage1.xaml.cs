@@ -14,12 +14,25 @@ namespace FoodStock01
     {
         String s = "http://cookpad.com/search/";
 
+        var listView = new ListView();
+
         public FoodPage1(string title)
         {
             //タイトル
             Title = title;
 
             InitializeComponent();
+
+            listView.ItemTapped += async (s, a) =>
+            {//リストタップジ
+                var item = (UserModel)a.Item;
+
+                if (await DisplayAlert("削除してよろしいですか", item.ToString(), "OK", "キャンセル"))
+                {
+                    ar.RemoveAt(ar.IndexOf(item));
+                    UserModel.deleteUser(item.Id);
+                }
+            };
         }
 
         void ChackBoxChanged(object sender, bool isChecked)
@@ -38,9 +51,15 @@ namespace FoodStock01
             }
         }
 
-        void Delete_Clicked(object sender, EventArgs e)
+        void Delete_Clicked(object s, EventArgs a)
         {
-            DisplayAlert("hi", "OK");
+            var item = (UserModel)a.Item;
+
+            if (await DisplayAlert("削除してよろしいですか", item.ToString(), "OK", "キャンセル"))
+            {
+                ar.RemoveAt(ar.IndexOf(item));
+                UserModel.deleteUser(item.Id);
+            }
         }
             /*
             private void deletebutton_Clicked(object sender,EventArgs args)
