@@ -57,13 +57,7 @@ namespace FoodStock01
 
         void Delete_Clicked(object s, EventArgs a)
         {
-            var item = (UserModel)a.Items;
-
-            if (await DisplayAlert("削除してよろしいですか", item.ToString(), "OK", "キャンセル"))
-            {
-                Items.RemoveAt(Items.IndexOf(item));
-                //UserModel.deleteUser(item.Id);
-            }
+            
         }
             /*
             private void deletebutton_Clicked(object sender,EventArgs args)
