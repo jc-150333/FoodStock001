@@ -13,6 +13,8 @@ namespace FoodStock01
     public partial class FoodPage1 : ContentPage
     {
         String s = "http://cookpad.com/search/";
+        
+        //this.deletebutton.Clicked += deletebutton_Clicked;
 
         public FoodPage1(string title)
         {
@@ -20,8 +22,6 @@ namespace FoodStock01
             Title = title;
 
             InitializeComponent();
-
-            this.deletebutton.Clicked += deletebutton_Clicked;
         }
 
         void ChackBoxChanged(object sender, bool isChecked)
@@ -40,6 +40,7 @@ namespace FoodStock01
             }
         }
 
+        /*
         private void deletebutton_Clicked(object sender,EventArgs args)
         {
             var item = (UserModel)args.Item;
@@ -49,7 +50,7 @@ namespace FoodStock01
                 ar.RemoveAt(ar.IndexOf(item));
                 UserModel.deleteUser(item.Id);
             }
-        }
+        }*/
 
         /*void OnButtonClicked(object sender, EventArgs e)
         {

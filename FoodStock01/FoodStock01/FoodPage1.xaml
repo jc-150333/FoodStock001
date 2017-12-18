@@ -29,10 +29,6 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                
-                <Button x:Name="deletebutton"
-                        Text="Delete"/>
-
                 <Label Text="食材名" 
                        BackgroundColor="Transparent"
                        Grid.Column="0" Grid.Row="0"/>
@@ -47,7 +43,6 @@
             </Grid>
 
             <ListView HasUnevenRows="true"
-                      y:Name="ar"
                   ItemsSource="{Binding Foods}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -61,7 +56,9 @@
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
-
+                                
+                                <Button x:Name="deletebutton"
+                                    Text="Delete"/>
                                 <Label Text="{Binding F_name}" 
                                    Grid.Column="0" Grid.Row="0"
                                    FontSize="Large"/>
