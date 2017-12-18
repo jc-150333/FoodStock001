@@ -18,7 +18,7 @@ namespace FoodStock01
 
         //private ObservableCollection<FoodModel> ar = new ObservableCollection<FoodModel>(FoodModel.selectFood());
 
-        ObservableCollection<FoodModel> Items = new ObservableCollection<FoodModel>();
+        //ObservableCollection<FoodModel> Items = new ObservableCollection<FoodModel>();
         
         public FoodPage1(string title)
         {
@@ -27,16 +27,6 @@ namespace FoodStock01
 
             InitializeComponent();
 
-            listView.ItemTapped += async (s, a) =>
-            {//リストタップジ
-                var item = (UserModel)a.Item;
-
-                if (await DisplayAlert("削除してよろしいですか", item.ToString(), "OK", "キャンセル"))
-                {
-                    ar.RemoveAt(ar.IndexOf(item));
-                    UserModel.deleteUser(item.Id);
-                }
-            };
         }
 
         void ChackBoxChanged(object sender, bool isChecked)
