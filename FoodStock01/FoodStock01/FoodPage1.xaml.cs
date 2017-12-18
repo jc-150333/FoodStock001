@@ -16,6 +16,10 @@ namespace FoodStock01
 
         //var listView = new ListView();
 
+        //private ObservableCollection<FoodModel> ar = new ObservableCollection<FoodModel>(FoodModel.selectFood());
+
+        ObservableCollection<FoodModel> Items = new ObservableCollection<FoodModel>();
+        
         public FoodPage1(string title)
         {
             //タイトル
@@ -53,12 +57,12 @@ namespace FoodStock01
 
         void Delete_Clicked(object s, EventArgs a)
         {
-            var item = (UserModel)a.Item;
+            var item = (UserModel)a.Items;
 
             if (await DisplayAlert("削除してよろしいですか", item.ToString(), "OK", "キャンセル"))
             {
-                ar.RemoveAt(ar.IndexOf(item));
-                UserModel.deleteUser(item.Id);
+                Items.RemoveAt(Items.IndexOf(item));
+                //UserModel.deleteUser(item.Id);
             }
         }
             /*
