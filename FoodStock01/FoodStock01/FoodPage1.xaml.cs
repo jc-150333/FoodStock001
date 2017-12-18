@@ -38,7 +38,7 @@ namespace FoodStock01
             }
         }
 
-        private void Delete_Clicked(object sender, EventArgs e)
+        void Delete_Clicked(object sender, EventArgs e)
         {
             DisplayAlert("hi", "OK");
         }
