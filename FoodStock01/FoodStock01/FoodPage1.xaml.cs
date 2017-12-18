@@ -13,8 +13,6 @@ namespace FoodStock01
     public partial class FoodPage1 : ContentPage
     {
         String s = "http://cookpad.com/search/";
-        
-        //this.deletebutton.Clicked += deletebutton_Clicked;
 
         public FoodPage1(string title)
         {
@@ -40,31 +38,35 @@ namespace FoodStock01
             }
         }
 
-        /*
-        private void deletebutton_Clicked(object sender,EventArgs args)
+        private void Delete_Clicked(object sender, EventArgs e)
         {
-            var item = (UserModel)args.Item;
-
-            if (await DisplayAlert("削除してよろしいですか", item.ToString(), "OK", "キャンセル"))
-            {
-                ar.RemoveAt(ar.IndexOf(item));
-                UserModel.deleteUser(item.Id);
-            }
-        }*/
-
-        /*void OnButtonClicked(object sender, EventArgs e)
-        {
-            s += ((Button)sender).Text + "　";
-            DisplayAlert("URL", s, "ok");
+            DisplayAlert("hi", "OK");
         }
+            /*
+            private void deletebutton_Clicked(object sender,EventArgs args)
+            {
+                var item = (UserModel)args.Item;
 
-        public class ButtonAndString
-        {
-            public Button B { set; get; }
-            public String S { set; get; }
-        }*/
+                if (await DisplayAlert("削除してよろしいですか", item.ToString(), "OK", "キャンセル"))
+                {
+                    ar.RemoveAt(ar.IndexOf(item));
+                    UserModel.deleteUser(item.Id);
+                }
+            }*/
 
-        void OnSearch_Clicked(object sender, EventArgs args)
+            /*void OnButtonClicked(object sender, EventArgs e)
+            {
+                s += ((Button)sender).Text + "　";
+                DisplayAlert("URL", s, "ok");
+            }
+
+            public class ButtonAndString
+            {
+                public Button B { set; get; }
+                public String S { set; get; }
+            }*/
+
+            void OnSearch_Clicked(object sender, EventArgs args)
         {
             //ページ遷移
             Navigation.PushAsync(new NextPage(s));
