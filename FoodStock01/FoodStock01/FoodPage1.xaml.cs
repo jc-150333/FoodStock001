@@ -20,6 +20,8 @@ namespace FoodStock01
             Title = title;
 
             InitializeComponent();
+
+            this.deletebutton.Clicked += deletebutton_Clicked;
         }
 
         void ChackBoxChanged(object sender, bool isChecked)
@@ -38,7 +40,7 @@ namespace FoodStock01
             }
         }
 
-        void Delete_Clicked(object sender,EventArgs args)
+        private void deletebutton_Clicked(object sender,EventArgs args)
         {
             var item = (UserModel)args.Item;
 
