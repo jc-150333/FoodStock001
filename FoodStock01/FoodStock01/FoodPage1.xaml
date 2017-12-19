@@ -43,7 +43,7 @@
             </Grid>
 
             <ListView 
-                x:Name="ItemListView"
+                x:Name="Foodlist"
                 HasUnevenRows="true"
                   ItemsSource="{Binding Foods}">
                 <ListView.ItemTemplate>

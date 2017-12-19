@@ -47,8 +47,10 @@ namespace FoodStock01
 
         void Delete_Clicked(object s, EventArgs a)
         {
-            
+            RemoveAt(IndexOf(a));
         }
+
+        
             /*
             private void deletebutton_Clicked(object sender,EventArgs args)
             {

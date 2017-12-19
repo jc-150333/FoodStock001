@@ -44,6 +44,10 @@ namespace FoodStock01
             }
         }*/
 
+
+        
+        
+
         /********************インサートメソッド**********************/
         public static void InsertFood(int f_no, string f_name, int f_result)
         {
@@ -146,6 +150,28 @@ namespace FoodStock01
 
                     System.Diagnostics.Debug.WriteLine(e);
                     return null;
+                }
+            }
+        }
+
+        public static List<FoodModel> DeleteList()
+        {
+            //データベースに接続する
+            using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
+            {
+                try
+                {
+
+                    //データベースにFoodテーブルを作成する
+                    db.CreateTable<FoodModel>();
+
+                    db.Delete<FoodModel>(f_no);//デリートで渡す値は主キーじゃないといけない説
+                    db.Commit();
+                }
+                catch (Exception e)
+                {
+                    db.Rollback();
+                    System.Diagnostics.Debug.WriteLine(e);
                 }
             }
         }
