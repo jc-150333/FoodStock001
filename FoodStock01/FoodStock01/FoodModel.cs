@@ -43,9 +43,6 @@ namespace FoodStock01
                 }
             }
         }*/
-
-
-        
         
 
         /********************インサートメソッド**********************/
@@ -154,6 +151,7 @@ namespace FoodStock01
             }
         }
 
+        /*
         public static List<FoodModel> DeleteList()
         {
             //データベースに接続する
@@ -174,6 +172,6 @@ namespace FoodStock01
                     System.Diagnostics.Debug.WriteLine(e);
                 }
             }
-        }
+        }*/
     }
 }

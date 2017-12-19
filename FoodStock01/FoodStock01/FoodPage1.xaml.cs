@@ -6,6 +6,7 @@ using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using FoodStock01;
+using System.Globalization;
 
 namespace FoodStock01
 {
@@ -29,6 +30,8 @@ namespace FoodStock01
 
         }
 
+        //public class SelectedItem : IValue
+
         void ChackBoxChanged(object sender, bool isChecked)
         {
             //選択された時の処理
@@ -47,7 +50,19 @@ namespace FoodStock01
 
         void Delete_Clicked(object s, EventArgs a)
         {
-            RemoveAt(IndexOf(a));
+            ItemSource.RemoveAt(IndexOf(a));
+        }
+
+        private void ListView_ItemTapped(object sender,ItemTappedEventArgs e)
+        {
+            var item = (FoodModel)e.Item;
+
+
+            if (await DisplayAlert("削除してよろしいですか", item.ToString(), "OK", "キャンセル"))
+            {
+                ListView_ItemTapped.RemoveAt(ar.IndexOf(item));
+                //UserModel.deleteUser(item.Id);
+            }
         }
 
         
