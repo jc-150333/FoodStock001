@@ -57,10 +57,11 @@ namespace FoodStock01
         {
             var item = (FoodModel)e.Item;
 
+            ObservableCollection<Food> ar = Foods;
 
             if (await DisplayAlert("削除してよろしいですか", item.ToString(), "OK", "キャンセル"))
             {
-                ListView_ItemTapped.RemoveAt(ar.IndexOf(item));
+                a.RemoveAt(ar.IndexOf(item));
                 //UserModel.deleteUser(item.Id);
             }
         }

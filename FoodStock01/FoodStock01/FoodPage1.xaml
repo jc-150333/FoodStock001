@@ -46,7 +46,7 @@
                 x:Name ="list"
                 HasUnevenRows="true"
                 ItemsSource="{Binding Foods}"
-                ItemTapped="ListView_ItemTapped"/>
+                ItemTapped="ListView_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
